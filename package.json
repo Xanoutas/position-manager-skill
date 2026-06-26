@@ -1,0 +1,46 @@
+{
+  "name": "position-manager-skill",
+  "version": "1.0.0",
+  "description": "AI skill for managing concentrated liquidity positions on Solana (Meteora DLMM, Orca, Raydium)",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "positions": "ts-node src/commands/positions.ts",
+    "il": "ts-node src/commands/il.ts",
+    "alerts": "ts-node src/commands/alerts.ts",
+    "rebalance": "ts-node src/commands/rebalance.ts",
+    "pnl": "ts-node src/commands/pnl.ts",
+    "portfolio": "ts-node src/commands/portfolio.ts",
+    "monitor": "ts-node src/agents/monitor.ts"
+  },
+  "keywords": [
+    "solana",
+    "meteora",
+    "dlmm",
+    "orca",
+    "raydium",
+    "clmm",
+    "liquidity",
+    "impermanent-loss",
+    "defi",
+    "ai-skill"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.1",
+    "@meteora-ag/dlmm": "^1.4.1",
+    "@orca-so/whirlpools-sdk": "^0.13.11",
+    "@raydium-io/raydium-sdk-v2": "^0.1.95",
+    "@solana/web3.js": "^1.98.0",
+    "better-sqlite3": "^9.4.3",
+    "bn.js": "^5.2.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.8",
+    "@types/bn.js": "^5.1.5",
+    "@types/node": "^20.11.30",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}
